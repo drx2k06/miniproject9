@@ -1,0 +1,201 @@
+{
+  "project": "NewsLens AI - News Article Classification",
+  "developer": "Daniel Richard Xavier",
+  "timestamp": "2026-10-28 21:41:29",
+  "dataset": {
+    "name": "AG News Topic Classification Benchmark",
+    "citation": "Zhang, X., Zhao, J., & LeCun, Y. (2015). Character-level Convolutional Networks for Text Classification. NeurIPS 2015.",
+    "source": "https://huggingface.co/datasets/ag_news",
+    "train_samples": 24000,
+    "test_samples": 7600,
+    "categories": [
+      "World",
+      "Sports",
+      "Business",
+      "Sci/Tech"
+    ],
+    "train_distribution": {
+      "World": 6000,
+      "Sports": 6000,
+      "Business": 6000,
+      "Sci/Tech": 6000
+    },
+    "test_distribution": {
+      "Business": 1900,
+      "Sci/Tech": 1900,
+      "Sports": 1900,
+      "World": 1900
+    },
+    "sampling_method": "Stratified random sampling across 4 balanced categories"
+  },
+  "model_selection": {
+    "champion_model": "Logistic Regression",
+    "rationale": "Logistic Regression achieved superior test-set performance (Macro F1: 0.8993 vs 0.8982, Accuracy: 0.8997 vs 0.8986). It learns well-calibrated hyperplane boundaries across TF-IDF features and outputs robust multi-class probability distributions via softmax."
+  },
+  "models": {
+    "Multinomial Naive Bayes": {
+      "accuracy": 0.8986,
+      "macro_precision": 0.8983,
+      "macro_recall": 0.8986,
+      "macro_f1": 0.8982,
+      "weighted_f1": 0.8982,
+      "confusion_matrix": [
+        [
+          1705,
+          59,
+          82,
+          54
+        ],
+        [
+          24,
+          1857,
+          8,
+          11
+        ],
+        [
+          67,
+          20,
+          1600,
+          213
+        ],
+        [
+          73,
+          19,
+          141,
+          1667
+        ]
+      ],
+      "per_class": {
+        "World": {
+          "class_id": 0,
+          "precision": 0.9123,
+          "recall": 0.8974,
+          "f1_score": 0.9047,
+          "support": 1900
+        },
+        "Sports": {
+          "class_id": 1,
+          "precision": 0.9499,
+          "recall": 0.9774,
+          "f1_score": 0.9634,
+          "support": 1900
+        },
+        "Business": {
+          "class_id": 2,
+          "precision": 0.8738,
+          "recall": 0.8421,
+          "f1_score": 0.8577,
+          "support": 1900
+        },
+        "Sci/Tech": {
+          "class_id": 3,
+          "precision": 0.8571,
+          "recall": 0.8774,
+          "f1_score": 0.8671,
+          "support": 1900
+        }
+      },
+      "classes": [
+        "World",
+        "Sports",
+        "Business",
+        "Sci/Tech"
+      ],
+      "total_test_samples": 7600,
+      "training_time_seconds": 4.23,
+      "cv_metrics": {
+        "cv_accuracy_mean": 0.9011,
+        "cv_accuracy_std": 0.0037,
+        "cv_macro_f1_mean": 0.9009,
+        "cv_macro_f1_std": 0.0037,
+        "cv_weighted_f1_mean": 0.9009,
+        "cv_weighted_f1_std": 0.0037,
+        "cv_macro_precision_mean": 0.901,
+        "cv_macro_recall_mean": 0.9011,
+        "folds": 5
+      }
+    },
+    "Logistic Regression": {
+      "accuracy": 0.8997,
+      "macro_precision": 0.8992,
+      "macro_recall": 0.8997,
+      "macro_f1": 0.8993,
+      "weighted_f1": 0.8993,
+      "confusion_matrix": [
+        [
+          1717,
+          63,
+          73,
+          47
+        ],
+        [
+          22,
+          1852,
+          16,
+          10
+        ],
+        [
+          71,
+          24,
+          1615,
+          190
+        ],
+        [
+          75,
+          30,
+          141,
+          1654
+        ]
+      ],
+      "per_class": {
+        "World": {
+          "class_id": 0,
+          "precision": 0.9109,
+          "recall": 0.9037,
+          "f1_score": 0.9073,
+          "support": 1900
+        },
+        "Sports": {
+          "class_id": 1,
+          "precision": 0.9406,
+          "recall": 0.9747,
+          "f1_score": 0.9574,
+          "support": 1900
+        },
+        "Business": {
+          "class_id": 2,
+          "precision": 0.8753,
+          "recall": 0.85,
+          "f1_score": 0.8625,
+          "support": 1900
+        },
+        "Sci/Tech": {
+          "class_id": 3,
+          "precision": 0.8701,
+          "recall": 0.8705,
+          "f1_score": 0.8703,
+          "support": 1900
+        }
+      },
+      "classes": [
+        "World",
+        "Sports",
+        "Business",
+        "Sci/Tech"
+      ],
+      "total_test_samples": 7600,
+      "training_time_seconds": 5.619,
+      "cv_metrics": {
+        "cv_accuracy_mean": 0.9031,
+        "cv_accuracy_std": 0.0033,
+        "cv_macro_f1_mean": 0.9028,
+        "cv_macro_f1_std": 0.0034,
+        "cv_weighted_f1_mean": 0.9028,
+        "cv_weighted_f1_std": 0.0034,
+        "cv_macro_precision_mean": 0.9029,
+        "cv_macro_recall_mean": 0.9031,
+        "folds": 5
+      }
+    }
+  }
+}

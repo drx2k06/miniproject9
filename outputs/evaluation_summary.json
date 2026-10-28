@@ -1,0 +1,70 @@
+{
+  "accuracy": 0.8997,
+  "macro_precision": 0.8992,
+  "macro_recall": 0.8997,
+  "macro_f1": 0.8993,
+  "weighted_f1": 0.8993,
+  "confusion_matrix": [
+    [
+      1717,
+      63,
+      73,
+      47
+    ],
+    [
+      22,
+      1852,
+      16,
+      10
+    ],
+    [
+      71,
+      24,
+      1615,
+      190
+    ],
+    [
+      75,
+      30,
+      141,
+      1654
+    ]
+  ],
+  "per_class": {
+    "World": {
+      "class_id": 0,
+      "precision": 0.9109,
+      "recall": 0.9037,
+      "f1_score": 0.9073,
+      "support": 1900
+    },
+    "Sports": {
+      "class_id": 1,
+      "precision": 0.9406,
+      "recall": 0.9747,
+      "f1_score": 0.9574,
+      "support": 1900
+    },
+    "Business": {
+      "class_id": 2,
+      "precision": 0.8753,
+      "recall": 0.85,
+      "f1_score": 0.8625,
+      "support": 1900
+    },
+    "Sci/Tech": {
+      "class_id": 3,
+      "precision": 0.8701,
+      "recall": 0.8705,
+      "f1_score": 0.8703,
+      "support": 1900
+    }
+  },
+  "classes": [
+    "World",
+    "Sports",
+    "Business",
+    "Sci/Tech"
+  ],
+  "total_test_samples": 7600
+}

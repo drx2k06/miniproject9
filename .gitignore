@@ -1,0 +1,27 @@
+# Python byte-code and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Large raw dataset file (full 120k samples, 18.5 MB)
+# The reproducible stratified 24k benchmark sample and test split are committed
+data/ag_news_train.parquet
+
+# Jupyter / checkpoints
+.ipynb_checkpoints/
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
